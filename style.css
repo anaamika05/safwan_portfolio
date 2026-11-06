@@ -21,8 +21,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
 .menu a:not(.btn){text-decoration:none;color:var(--char);transition:color .2s}.menu a:not(.btn):hover{color:var(--gold)}
 .burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;position:relative}
 .burger span{position:absolute;left:9px;right:9px;height:1.5px;background:var(--navy);transition:.25s}
-.burger span:first-child{top:15px}.burger span:last-child{top:24px}
-.burger[aria-expanded=true] span:first-child{top:20px;transform:rotate(45deg)}.burger[aria-expanded=true] span:last-child{top:20px;transform:rotate(-45deg)}
+.burger span:first-child{top:12px}.burger span:nth-child(2){top:20px}.burger span:last-child{top:28px}
+.burger[aria-expanded=true] span:first-child{top:20px;transform:rotate(45deg)}.burger[aria-expanded=true] span:nth-child(2){opacity:0}.burger[aria-expanded=true] span:last-child{top:20px;transform:rotate(-45deg)}
 /* hero */
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:48px 0 56px}
 .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:18px}
