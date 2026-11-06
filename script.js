@@ -4,6 +4,12 @@
   function setMenu(o){menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Close menu':'Open menu');}
   burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'));});
   menu.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false);});
+  d.querySelectorAll('a[href="#top"]').forEach(function(link){
+    link.addEventListener('click',function(e){
+      e.preventDefault();
+      window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    });
+  });
   d.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
   window.addEventListener('resize',function(){if(innerWidth>700)setMenu(false);});
   d.getElementById('yr').textContent=new Date().getFullYear();
